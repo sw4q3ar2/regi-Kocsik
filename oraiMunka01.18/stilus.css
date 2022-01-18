@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+main,header,nav,article,aside,footer{
+    border: 1px solid white;
+}
+
+main{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "h h h"
+                         "n n n"
+                         "a a as"
+                         "f f f";
+}
+
+header{
+    grid-area: h;
+    color: darkolivegreen;
+}
+nav{
+    grid-area: n;
+    background-color: darkolivegreen;
+    color: white;
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    text-decoration: none;  
+}
+article{
+    grid-area: a;
+    padding: 10px;
+}
+.kont{
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+ol li{
+    text-align: justify;
+    padding: 10px ;
+}
+aside{
+    grid-area: as;
+    padding: 5px;
+    
+}
+footer{
+    grid-area: f;
+    margin: auto;
+    color: darkolivegreen;
+}
+img{
+    width: 100%;
+    margin: auto;
+    border: 2px solid lightslategray;
+    padding: 5px;
+}
+
+body{
+    background-color: lightslategray;
+}
+
+h2{
+    color: darkolivegreen;
+}
+
+.Karl{
+    border: 1px solid lightslategray;
+}
+.Ford{
+    border: 1px solid lightslategray;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: gainsboro;
+}
+
+@media screen and (max-width: 700px){
+    main{
+        grid-template-columns: auto;
+        grid-template-areas: "h"
+                             "n"
+                             "a"
+                             "as"
+                             "f";
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+}
+    
+
+
